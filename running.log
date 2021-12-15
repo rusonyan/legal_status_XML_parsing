@@ -1,44 +1,33 @@
-
-2021-12-06 02:00:02.683 | DEBUG    | FTP:DownLoadFileTree:42 - 远程服务器的所有文件列表:['20210716', '20210720', '20210723', '20210727', '20210730', '20210803', '20210806', '20210810', '20210813', '20210817', '20210820', '20210824', '20210827', '20210831', '20210903', '20210907', '20210910', '20210914', '20210917', '20210921', '20210924', '20210928', '20211001', '20211008', '20211012', '20211015', '20211019', '20211022', '20211026', '20211029', '20211102', '20211105', '20211109', '20211112', '20211116']
-2021-12-06 02:00:02.716 | SUCCESS  | toast:send:70 - 今天无XML更新鸭！今天无XML更新鸭！
-2021-12-07 02:00:02.664 | DEBUG    | FTP:DownLoadFileTree:42 - 远程服务器的所有文件列表:['20210716', '20210720', '20210723', '20210727', '20210730', '20210803', '20210806', '20210810', '20210813', '20210817', '20210820', '20210824', '20210827', '20210831', '20210903', '20210907', '20210910', '20210914', '20210917', '20210921', '20210924', '20210928', '20211001', '20211008', '20211012', '20211015', '20211019', '20211022', '20211026', '20211029', '20211102', '20211105', '20211109', '20211112', '20211116']
-2021-12-07 02:00:02.687 | SUCCESS  | toast:send:70 - 今天无XML更新鸭！今天无XML更新鸭！
-2021-12-08 02:00:01.895 | ERROR    | __main__:<module>:37 - An error has been caught in function '<module>', process 'MainProcess' (366326), thread 'MainThread' (140671699590016):
-
-2021-12-09 13:28:42.901 | DEBUG    | FTP:DownLoadFileTree:42 - 远程服务器的所有文件列表:['20210716', '20210720', '20210723', '20210727', '20210730', '20210803', '20210806', '20210810', '20210813', '20210817', '20210820', '20210824', '20210827', '20210831', '20210903', '20210907', '20210910', '20210914', '20210917', '20210921', '20210924', '20210928', '20211001', '20211008', '20211012', '20211015', '20211019', '20211022', '20211026', '20211029', '20211102', '20211105', '20211109', '20211112', '20211116', '20211119', '20211123']
-2021-12-09 13:28:46.087 | ERROR    | toast:send_errow:76 - [Errno 104] Connection reset by peer
-2021-12-09 13:28:46.321 | SUCCESS  | __main__:<module>:42 - -------------------------------
-2021-12-09 13:42:38.348 | DEBUG    | FTP:DownLoadFileTree:42 - 远程服务器的所有文件列表:['20210716', '20210720', '20210723', '20210727', '20210730', '20210803', '20210806', '20210810', '20210813', '20210817', '20210820', '20210824', '20210827', '20210831', '20210903', '20210907', '20210910', '20210914', '20210917', '20210921', '20210924', '20210928', '20211001', '20211008', '20211012', '20211015', '20211019', '20211022', '20211026', '20211029', '20211102', '20211105', '20211109', '20211112', '20211116', '20211119', '20211123']
-2021-12-09 13:42:38.483 | INFO     | FTP:DownLoadFileTree:51 - ['20211123-1-001-CRC.TXT', '20211123-1-001.ZIP', '20211123-INDEX-001.TXT', 'Legal-status-CN-20211123-S-INDEX.XML']
-2021-12-09 13:42:38.657 | DEBUG    | FTP:DownLoadFileTree:42 - 远程服务器的所有文件列表:['20211123-1-001-CRC.TXT', '20211123-1-001.ZIP', '20211123-INDEX-001.TXT', 'Legal-status-CN-20211123-S-INDEX.XML']
-2021-12-09 13:42:38.796 | INFO     | FTP:DownLoadFileTree:51 - ['Legal-status-CN-20211123-S-INDEX.XML']
-2021-12-09 13:42:48.806 | INFO     | FTP:DownLoadFile:31 - <_io.BufferedWriter name='/home/yrs/history/20211123/Legal-status-CN-20211123-S-INDEX.XML'>
-2021-12-09 13:42:50.208 | INFO     | FTP:DownLoadFileTree:51 - ['20211123-1-001-CRC.TXT']
-2021-12-09 13:43:00.218 | INFO     | FTP:DownLoadFile:31 - <_io.BufferedWriter name='/home/yrs/history/20211123/20211123-1-001-CRC.TXT'>
-2021-12-09 13:43:00.573 | INFO     | FTP:DownLoadFileTree:51 - ['20211123-1-001.ZIP']
-2021-12-09 13:43:10.584 | INFO     | FTP:DownLoadFile:31 - <_io.BufferedWriter name='/home/yrs/history/20211123/20211123-1-001.ZIP'>
-2021-12-09 13:43:12.163 | INFO     | FTP:DownLoadFileTree:51 - ['20211123-INDEX-001.TXT']
-2021-12-09 13:43:22.165 | INFO     | FTP:DownLoadFile:31 - <_io.BufferedWriter name='/home/yrs/history/20211123/20211123-INDEX-001.TXT'>
-2021-12-09 13:43:22.723 | INFO     | FTP:DownLoadFileTree:51 - ['20211119-1-001-CRC.TXT', '20211119-1-001.ZIP', '20211119-INDEX-001.TXT', 'Legal-status-CN-20211119-S-INDEX.XML']
-2021-12-09 13:43:22.877 | DEBUG    | FTP:DownLoadFileTree:42 - 远程服务器的所有文件列表:['20211119-1-001-CRC.TXT', '20211119-1-001.ZIP', '20211119-INDEX-001.TXT', 'Legal-status-CN-20211119-S-INDEX.XML']
-2021-12-09 13:43:23.012 | INFO     | FTP:DownLoadFileTree:51 - ['20211119-INDEX-001.TXT']
-2021-12-09 13:43:33.023 | INFO     | FTP:DownLoadFile:31 - <_io.BufferedWriter name='/home/yrs/history/20211119/20211119-INDEX-001.TXT'>
-2021-12-09 13:43:36.316 | INFO     | FTP:DownLoadFileTree:51 - ['20211119-1-001-CRC.TXT']
-2021-12-09 13:43:46.326 | INFO     | FTP:DownLoadFile:31 - <_io.BufferedWriter name='/home/yrs/history/20211119/20211119-1-001-CRC.TXT'>
-2021-12-09 13:43:46.622 | INFO     | FTP:DownLoadFileTree:51 - ['Legal-status-CN-20211119-S-INDEX.XML']
-2021-12-09 13:43:56.624 | INFO     | FTP:DownLoadFile:31 - <_io.BufferedWriter name='/home/yrs/history/20211119/Legal-status-CN-20211119-S-INDEX.XML'>
-2021-12-09 13:43:59.487 | INFO     | FTP:DownLoadFileTree:51 - ['20211119-1-001.ZIP']
-2021-12-09 13:44:09.494 | INFO     | FTP:DownLoadFile:31 - <_io.BufferedWriter name='/home/yrs/history/20211119/20211119-1-001.ZIP'>
-2021-12-09 13:44:11.520 | ERROR    | __main__:<module>:37 - An error has been caught in function '<module>', process 'MainProcess' (409153), thread 'MainThread' (140526859045760):
-Traceback (most recent call last):
-
-> File "/home/yrs/legal_status_XML_parsing/App.py", line 37, in <module>
-    main()
-    └ <function main at 0x7fceee0a5048>
-
-  File "/home/yrs/legal_status_XML_parsing/App.py", line 21, in main
-    paths = list(map(lambda x: Local + x, ))
-                               └ '/home/yrs/history/'
-
-TypeError: map() must have at least two arguments.
-2021-12-09 13:44:11.525 | SUCCESS  | __main__:<module>:42 - -------------------------------
+2021-12-10 21:12:46.105 | SUCCESS  | toast:send:70 - FTP服务器人数过多！421 Maximum login limit has been reached.
+2021-12-10 21:12:46.105 | SUCCESS  | __main__:<module>:42 - -------------------------------
+2021-12-10 21:30:26.336 | ERROR    | toast:send_errow:76 - 550 Failed to change directory.
+2021-12-10 21:30:26.337 | SUCCESS  | __main__:<module>:42 - -------------------------------
+2021-12-10 21:32:02.559 | SUCCESS  | toast:send:70 - FTP服务器人数过多！421 Maximum login limit has been reached.
+2021-12-10 21:32:02.559 | SUCCESS  | __main__:<module>:42 - -------------------------------
+2021-12-11 02:00:02.297 | DEBUG    | FTP:DownLoadFileTree:59 - 远程服务器的所有文件列表:['20210716', '20210720', '20210723', '20210727', '20210730', '20210803', '20210806', '20210810', '20210813', '20210817', '20210820', '20210824', '20210827', '20210831', '20210903', '20210907', '20210910', '20210914', '20210917', '20210921', '20210924', '20210928', '20211001', '20211008', '20211012', '20211015', '20211019', '20211022', '20211026', '20211029', '20211102', '20211105', '20211109', '20211112', '20211116', '20211119', '20211123']
+2021-12-11 02:00:02.614 | SUCCESS  | toast:send:70 - 今天无XML更新鸭！今天无XML更新鸭！
+2021-12-11 02:00:02.614 | SUCCESS  | __main__:<module>:42 - -------------------------------
+2021-12-12 21:59:08.186 | SUCCESS  | toast:send:70 - FTP服务器人数过多！421 Maximum login limit has been reached.
+2021-12-12 21:59:08.350 | SUCCESS  | __main__:<module>:42 - -------------------------------
+2021-12-12 21:59:31.544 | SUCCESS  | toast:send:70 - FTP服务器人数过多！421 Maximum login limit has been reached.
+2021-12-12 21:59:31.696 | SUCCESS  | __main__:<module>:42 - -------------------------------
+2021-12-13 02:00:02.266 | SUCCESS  | toast:send:70 - FTP服务器人数过多！421 Maximum login limit has been reached.
+2021-12-13 02:00:02.409 | SUCCESS  | __main__:<module>:42 - -------------------------------
+2021-12-13 21:50:19.617 | SUCCESS  | toast:send:70 - FTP服务器人数过多！421 Maximum login limit has been reached.
+2021-12-13 21:50:19.777 | SUCCESS  | __main__:<module>:42 - -------------------------------
+2021-12-13 21:50:27.099 | SUCCESS  | toast:send:70 - FTP服务器人数过多！421 Maximum login limit has been reached.
+2021-12-13 21:50:27.212 | SUCCESS  | __main__:<module>:42 - -------------------------------
+2021-12-14 02:02:34.677 | ERROR    | toast:send_errow:76 - [Errno 110] Connection timed out
+2021-12-15 02:00:02.894 | DEBUG    | FTP:DownLoadFileTree:59 - 远程服务器的所有文件列表:['20210716', '20210720', '20210723', '20210727', '20210730', '20210803', '20210806', '20210810', '20210813', '20210817', '20210820', '20210824', '20210827', '20210831', '20210903', '20210907', '20210910', '20210914', '20210917', '20210921', '20210924', '20210928', '20211001', '20211008', '20211012', '20211015', '20211019', '20211022', '20211026', '20211029', '20211102', '20211105', '20211109', '20211112', '20211116', '20211119', '20211123']
+2021-12-15 02:00:03.053 | INFO     | FTP:DownLoadFileTree:68 - ['20211119-1-001-CRC.TXT', '20211119-1-001.ZIP', '20211119-INDEX-001.TXT', 'Legal-status-CN-20211119-S-INDEX.XML']
+2021-12-15 02:00:13.630 | INFO     | FTP:DownLoadFile:32 - <_io.BufferedWriter name='/home/yrs/history/20211119/20211119-1-001-CRC.TXT'>
+2021-12-15 02:00:23.950 | INFO     | FTP:DownLoadFile:32 - <_io.BufferedWriter name='/home/yrs/history/20211119/20211119-1-001.ZIP'>
+2021-12-15 02:00:34.955 | INFO     | FTP:DownLoadFile:32 - <_io.BufferedWriter name='/home/yrs/history/20211119/20211119-INDEX-001.TXT'>
+2021-12-15 02:00:45.111 | INFO     | FTP:DownLoadFile:32 - <_io.BufferedWriter name='/home/yrs/history/20211119/Legal-status-CN-20211119-S-INDEX.XML'>
+2021-12-15 02:00:48.093 | INFO     | FTP:DownLoadFileTree:68 - ['20211123-1-001-CRC.TXT', '20211123-1-001.ZIP', '20211123-INDEX-001.TXT', 'Legal-status-CN-20211123-S-INDEX.XML']
+2021-12-15 02:00:58.266 | INFO     | FTP:DownLoadFile:32 - <_io.BufferedWriter name='/home/yrs/history/20211123/20211123-1-001-CRC.TXT'>
+2021-12-15 02:01:08.868 | INFO     | FTP:DownLoadFile:32 - <_io.BufferedWriter name='/home/yrs/history/20211123/20211123-1-001.ZIP'>
+2021-12-15 02:01:19.480 | INFO     | FTP:DownLoadFile:32 - <_io.BufferedWriter name='/home/yrs/history/20211123/20211123-INDEX-001.TXT'>
+2021-12-15 02:01:29.643 | INFO     | FTP:DownLoadFile:32 - <_io.BufferedWriter name='/home/yrs/history/20211123/Legal-status-CN-20211123-S-INDEX.XML'>
+2021-12-15 02:01:30.925 | SUCCESS  | toast:send:70 - 此次解析数据公开日为{'20211119', '20211123'}解析成功
+2021-12-15 02:01:31.086 | SUCCESS  | __main__:<module>:42 - -------------------------------

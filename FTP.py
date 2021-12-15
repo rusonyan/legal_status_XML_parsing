@@ -25,6 +25,7 @@ class Ftp:
         self.ftp.connect('patdata2.cnipa.gov.cn', 21)
         self.ftp.login('xxzx_yingmaiqi', 'yingmaiqi1.')
 
+
     def DownLoadFile(self, LocalFile, RemoteFile):
         time.sleep(10)
         file_handler = open(LocalFile, 'wb')
@@ -33,6 +34,22 @@ class Ftp:
         file_handler.close()
         return True
 
+    def DownLoadFileTrees(self, LocalDir, RemoteDir):
+        if not os.path.exists(LocalDir):
+            os.makedirs(LocalDir)
+        self.ftp.cwd(RemoteDir)
+        RemoteNames = self.ftp.nlst()
+        for file in RemoteNames:
+            Local = os.path.join(LocalDir, file)
+            if file.find(".") == -1:
+                if not os.path.exists(Local):
+                    os.makedirs(Local)
+                self.DownLoadFileTrees(Local, file)
+            else:
+                self.DownLoadFile(Local, file)
+        self.ftp.cwd("..")
+        return RemoteNames
+
     def DownLoadFileTree(self, LocalDir, RemoteDir):
         if not os.path.exists(LocalDir):
             os.makedirs(LocalDir)
@@ -40,9 +57,9 @@ class Ftp:
         RemoteNames = self.ftp.nlst()
         newSet = set(RemoteNames) - get()
         logger.debug("远程服务器的所有文件列表:"+str(RemoteNames))
-        #logger.info("重新生成记录")
-        #put(set(RemoteNames))
-        #newSet=set(RemoteNames)-set(RemoteNames)
+        
+        # put(set(RemoteNames))
+        # newSet=set(RemoteNames)-set(RemoteNames)
         if len(newSet) is 0:
             return None
         else:
@@ -52,7 +69,7 @@ class Ftp:
                 if file.find(".") == -1:
                     if not os.path.exists(Local):
                         os.makedirs(Local)
-                    self.DownLoadFileTree(Local, file)
+                    self.DownLoadFileTrees(Local, file)
                 else:
                     self.DownLoadFile(Local, file)
             self.ftp.cwd("..")

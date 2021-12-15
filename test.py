@@ -26,3 +26,22 @@ import pickle
 #     print(path)
 #    #unzip_file(path)
 #     locate_XML_file(path)
+
+def put(tuple):
+    with open('.history', 'wb') as f:
+        pickle.dump(tuple, f)
+
+
+def get():
+    with open('.history', 'rb') as f:
+        return pickle.load(f)
+
+a=list(get())
+a.sort()
+print(a)
+
+# a=a[:-2]
+# print(a)
+# b=set(a)
+# print(b)
+# put(b)

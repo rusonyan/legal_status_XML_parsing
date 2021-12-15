@@ -12,16 +12,16 @@ from xml_to_node import locate_XML_file
 Local = r'/home/yrs/history/'
 logger.add("running.log")
 
-@logger.catch
+
 def main():
     RemoteNames = find_new_file()
     if RemoteNames is None:
         toast.send('今天无XML更新鸭！', '今天无XML更新鸭！')
     else:
         paths = list(map(lambda x: Local + x, RemoteNames))
-        for path in paths:
-            unzip_file(path)
-            locate_XML_file(path)
+        # for path in paths:
+        #     unzip_file(path)
+        #     locate_XML_file(path)
         toast.send('此次解析数据公开日为'+str(RemoteNames), '解析成功')
 
 def find_new_file():
