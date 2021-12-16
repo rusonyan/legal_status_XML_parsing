@@ -12,10 +12,9 @@ def unzip_file(path):  # 获取目录下所有文件名
         if filename.endswith('.ZIP'):
             filepath = os.path.join(path, filename)
             zip_file = zipfile.ZipFile(filepath)  # 获取压缩文件
-            logger.info(filename)
+            logger.info("解压"+filename)
             newfilepath = filename.split(".", 1)[0]  # 获取压缩文件的文件名
             newfilepath = os.path.join(path, newfilepath)
-            logger.info(newfilepath)
             if os.path.isdir(newfilepath):  # 根据获取的压缩文件的文件名建立相应的文件夹
                 pass
             else:

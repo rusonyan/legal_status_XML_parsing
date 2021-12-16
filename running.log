@@ -1,33 +1,202 @@
-2021-12-10 21:12:46.105 | SUCCESS  | toast:send:70 - FTP服务器人数过多！421 Maximum login limit has been reached.
-2021-12-10 21:12:46.105 | SUCCESS  | __main__:<module>:42 - -------------------------------
-2021-12-10 21:30:26.336 | ERROR    | toast:send_errow:76 - 550 Failed to change directory.
-2021-12-10 21:30:26.337 | SUCCESS  | __main__:<module>:42 - -------------------------------
-2021-12-10 21:32:02.559 | SUCCESS  | toast:send:70 - FTP服务器人数过多！421 Maximum login limit has been reached.
-2021-12-10 21:32:02.559 | SUCCESS  | __main__:<module>:42 - -------------------------------
-2021-12-11 02:00:02.297 | DEBUG    | FTP:DownLoadFileTree:59 - 远程服务器的所有文件列表:['20210716', '20210720', '20210723', '20210727', '20210730', '20210803', '20210806', '20210810', '20210813', '20210817', '20210820', '20210824', '20210827', '20210831', '20210903', '20210907', '20210910', '20210914', '20210917', '20210921', '20210924', '20210928', '20211001', '20211008', '20211012', '20211015', '20211019', '20211022', '20211026', '20211029', '20211102', '20211105', '20211109', '20211112', '20211116', '20211119', '20211123']
-2021-12-11 02:00:02.614 | SUCCESS  | toast:send:70 - 今天无XML更新鸭！今天无XML更新鸭！
-2021-12-11 02:00:02.614 | SUCCESS  | __main__:<module>:42 - -------------------------------
-2021-12-12 21:59:08.186 | SUCCESS  | toast:send:70 - FTP服务器人数过多！421 Maximum login limit has been reached.
-2021-12-12 21:59:08.350 | SUCCESS  | __main__:<module>:42 - -------------------------------
-2021-12-12 21:59:31.544 | SUCCESS  | toast:send:70 - FTP服务器人数过多！421 Maximum login limit has been reached.
-2021-12-12 21:59:31.696 | SUCCESS  | __main__:<module>:42 - -------------------------------
-2021-12-13 02:00:02.266 | SUCCESS  | toast:send:70 - FTP服务器人数过多！421 Maximum login limit has been reached.
-2021-12-13 02:00:02.409 | SUCCESS  | __main__:<module>:42 - -------------------------------
-2021-12-13 21:50:19.617 | SUCCESS  | toast:send:70 - FTP服务器人数过多！421 Maximum login limit has been reached.
-2021-12-13 21:50:19.777 | SUCCESS  | __main__:<module>:42 - -------------------------------
-2021-12-13 21:50:27.099 | SUCCESS  | toast:send:70 - FTP服务器人数过多！421 Maximum login limit has been reached.
-2021-12-13 21:50:27.212 | SUCCESS  | __main__:<module>:42 - -------------------------------
-2021-12-14 02:02:34.677 | ERROR    | toast:send_errow:76 - [Errno 110] Connection timed out
-2021-12-15 02:00:02.894 | DEBUG    | FTP:DownLoadFileTree:59 - 远程服务器的所有文件列表:['20210716', '20210720', '20210723', '20210727', '20210730', '20210803', '20210806', '20210810', '20210813', '20210817', '20210820', '20210824', '20210827', '20210831', '20210903', '20210907', '20210910', '20210914', '20210917', '20210921', '20210924', '20210928', '20211001', '20211008', '20211012', '20211015', '20211019', '20211022', '20211026', '20211029', '20211102', '20211105', '20211109', '20211112', '20211116', '20211119', '20211123']
-2021-12-15 02:00:03.053 | INFO     | FTP:DownLoadFileTree:68 - ['20211119-1-001-CRC.TXT', '20211119-1-001.ZIP', '20211119-INDEX-001.TXT', 'Legal-status-CN-20211119-S-INDEX.XML']
-2021-12-15 02:00:13.630 | INFO     | FTP:DownLoadFile:32 - <_io.BufferedWriter name='/home/yrs/history/20211119/20211119-1-001-CRC.TXT'>
-2021-12-15 02:00:23.950 | INFO     | FTP:DownLoadFile:32 - <_io.BufferedWriter name='/home/yrs/history/20211119/20211119-1-001.ZIP'>
-2021-12-15 02:00:34.955 | INFO     | FTP:DownLoadFile:32 - <_io.BufferedWriter name='/home/yrs/history/20211119/20211119-INDEX-001.TXT'>
-2021-12-15 02:00:45.111 | INFO     | FTP:DownLoadFile:32 - <_io.BufferedWriter name='/home/yrs/history/20211119/Legal-status-CN-20211119-S-INDEX.XML'>
-2021-12-15 02:00:48.093 | INFO     | FTP:DownLoadFileTree:68 - ['20211123-1-001-CRC.TXT', '20211123-1-001.ZIP', '20211123-INDEX-001.TXT', 'Legal-status-CN-20211123-S-INDEX.XML']
-2021-12-15 02:00:58.266 | INFO     | FTP:DownLoadFile:32 - <_io.BufferedWriter name='/home/yrs/history/20211123/20211123-1-001-CRC.TXT'>
-2021-12-15 02:01:08.868 | INFO     | FTP:DownLoadFile:32 - <_io.BufferedWriter name='/home/yrs/history/20211123/20211123-1-001.ZIP'>
-2021-12-15 02:01:19.480 | INFO     | FTP:DownLoadFile:32 - <_io.BufferedWriter name='/home/yrs/history/20211123/20211123-INDEX-001.TXT'>
-2021-12-15 02:01:29.643 | INFO     | FTP:DownLoadFile:32 - <_io.BufferedWriter name='/home/yrs/history/20211123/Legal-status-CN-20211123-S-INDEX.XML'>
-2021-12-15 02:01:30.925 | SUCCESS  | toast:send:70 - 此次解析数据公开日为{'20211119', '20211123'}解析成功
-2021-12-15 02:01:31.086 | SUCCESS  | __main__:<module>:42 - -------------------------------
+
+2021-12-16 16:11:45.859 | DEBUG    | FTP:find_raw_data:56 - 远程服务器的所有文件列表:['20210910', '20210914', '20210917', '20210921', '20210924', '20210928', '20211001', '20211008', '20211012', '20211015', '20211105', '20211109', '20211112']
+2021-12-16 16:11:45.867 | DEBUG    | FTP:find_raw_data:57 - 本次要下载的文件列表:{'20211109', '20211112', '20211105'}
+2021-12-16 16:11:45.969 | INFO     | FTP:download_folder:80 - 20211109的文件夹文件列表:['20211109-1-001-CRC.TXT', '20211109-1-001.ZIP', '20211109-INDEX-001.TXT', 'Legal-status-CN-20211109-S-INDEX.XML']
+2021-12-16 16:11:45.969 | INFO     | FTP:download_folder:86 - 正在下载:20211109-1-001.ZIP
+2021-12-16 16:11:45.979 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20211109\\20211109-1-001.ZIP'>
+2021-12-16 16:12:16.139 | INFO     | FTP:close:50 - ftp退出
+2021-12-16 16:12:16.160 | INFO     | Unzip:unzip_file:15 - 20211109-1-001.ZIP
+2021-12-16 16:12:16.160 | INFO     | Unzip:unzip_file:18 - C:\\Users\\ruson\\Music\20211109\20211109-1-001
+2021-12-16 16:12:16.219 | INFO     | Unzip:unzip_file:26 - 解压20211109-1-001.ZIP成功
+2021-12-16 16:12:16.219 | SUCCESS  | toast:send:70 - 数据公开日{'20211109', '20211112', '20211105'}解析成功
+2021-12-16 16:12:16.239 | INFO     | FTP:download_folder:80 - 20211112的文件夹文件列表:['20211112-1-001-CRC.TXT', '20211112-1-001.ZIP', '20211112-INDEX-001.TXT', 'Legal-status-CN-20211112-S-INDEX.XML']
+2021-12-16 16:12:16.239 | INFO     | FTP:download_folder:86 - 正在下载:20211112-1-001.ZIP
+2021-12-16 16:12:16.239 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20211112\\20211112-1-001.ZIP'>
+2021-12-16 16:14:37.459 | DEBUG    | FTP:find_raw_data:56 - 远程服务器的所有文件列表:['20210910', '20210914', '20210917', '20210921', '20210924', '20210928', '20211001', '20211008', '20211012', '20211015', '20211105', '20211109', '20211112']
+2021-12-16 16:14:37.469 | DEBUG    | FTP:find_raw_data:57 - 本次要下载的文件列表:{'20211112', '20211105'}
+2021-12-16 16:14:37.569 | INFO     | FTP:download_folder:80 - 20211112的文件夹文件列表:['20211112-1-001-CRC.TXT', '20211112-1-001.ZIP', '20211112-INDEX-001.TXT', 'Legal-status-CN-20211112-S-INDEX.XML']
+2021-12-16 16:14:37.569 | INFO     | FTP:download_folder:86 - 正在下载:20211112-1-001.ZIP
+2021-12-16 16:14:37.569 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20211112\\20211112-1-001.ZIP'>
+2021-12-16 16:15:24.744 | INFO     | FTP:close:50 - ftp退出
+2021-12-16 16:15:24.761 | INFO     | Unzip:unzip_file:15 - 20211112-1-001.ZIP
+2021-12-16 16:15:24.761 | INFO     | Unzip:unzip_file:18 - C:\\Users\\ruson\\Music\20211112\20211112-1-001
+2021-12-16 16:15:24.851 | INFO     | Unzip:unzip_file:26 - 解压20211112-1-001.ZIP成功
+2021-12-16 16:15:24.859 | SUCCESS  | toast:send:70 - 数据公开日{'20211112', '20211105'}解析成功
+2021-12-16 16:15:24.974 | INFO     | FTP:download_folder:80 - 20211105的文件夹文件列表:['20211105-1-001-CRC.TXT', '20211105-1-001.ZIP', '20211105-INDEX-001.TXT', 'Legal-status-CN-20211105-S-INDEX.XML']
+2021-12-16 16:15:24.979 | INFO     | FTP:download_folder:86 - 正在下载:20211105-1-001.ZIP
+2021-12-16 16:15:24.979 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20211105\\20211105-1-001.ZIP'>
+2021-12-16 16:15:55.864 | INFO     | FTP:close:50 - ftp退出
+2021-12-16 16:15:55.884 | INFO     | Unzip:unzip_file:15 - 20211105-1-001.ZIP
+2021-12-16 16:15:55.889 | INFO     | Unzip:unzip_file:18 - C:\\Users\\ruson\\Music\20211105\20211105-1-001
+2021-12-16 16:15:55.939 | INFO     | Unzip:unzip_file:26 - 解压20211105-1-001.ZIP成功
+2021-12-16 16:15:55.949 | SUCCESS  | toast:send:70 - 数据公开日{'20211112', '20211105'}解析成功
+2021-12-16 16:15:55.951 | SUCCESS  | __main__:<module>:63 - --------END--------
+2021-12-16 16:18:26.679 | DEBUG    | FTP:find_raw_data:56 - 远程服务器的所有文件列表:['20210910', '20210914', '20210917', '20210921', '20210924', '20210928', '20211001', '20211008', '20211012', '20211015', '20211019', '20211022', '20211105', '20211109', '20211112']
+2021-12-16 16:18:26.679 | DEBUG    | FTP:find_raw_data:57 - 本次要下载的文件列表:{'20211019', '20211022'}
+2021-12-16 16:18:26.799 | INFO     | FTP:download_folder:80 - 20211019的文件夹文件列表:['20211019-1-001-CRC.TXT', '20211019-1-001.ZIP', '20211019-INDEX-001.TXT', 'Legal-status-CN-20211019-S-INDEX.XML']
+2021-12-16 16:18:26.803 | INFO     | FTP:download_folder:86 - 正在下载:20211019-1-001.ZIP
+2021-12-16 16:18:26.810 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20211019\\20211019-1-001.ZIP'>
+2021-12-16 16:19:22.924 | INFO     | FTP:close:50 - ftp退出
+2021-12-16 16:19:22.941 | INFO     | Unzip:unzip_file:15 - 20211019-1-001.ZIP
+2021-12-16 16:19:22.941 | INFO     | Unzip:unzip_file:18 - C:\\Users\\ruson\\Music\20211019\20211019-1-001
+2021-12-16 16:19:23.019 | INFO     | Unzip:unzip_file:26 - 解压20211019-1-001.ZIP成功
+2021-12-16 16:19:23.024 | SUCCESS  | toast:send:70 - 数据公开日{'20211019', '20211022'}解析成功
+2021-12-16 16:19:26.089 | INFO     | FTP:download_folder:80 - 20211022的文件夹文件列表:['20211022-1-001-CRC.TXT', '20211022-1-001.ZIP', '20211022-INDEX-001.TXT', 'Legal-status-CN-20211022-S-INDEX.XML']
+2021-12-16 16:19:26.093 | INFO     | FTP:download_folder:86 - 正在下载:20211022-1-001.ZIP
+2021-12-16 16:19:26.093 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20211022\\20211022-1-001.ZIP'>
+2021-12-16 16:19:55.808 | INFO     | FTP:close:50 - ftp退出
+2021-12-16 16:19:55.824 | INFO     | Unzip:unzip_file:15 - 20211022-1-001.ZIP
+2021-12-16 16:19:55.830 | INFO     | Unzip:unzip_file:18 - C:\\Users\\ruson\\Music\20211022\20211022-1-001
+2021-12-16 16:19:55.884 | INFO     | Unzip:unzip_file:26 - 解压20211022-1-001.ZIP成功
+2021-12-16 16:19:55.889 | SUCCESS  | toast:send:70 - 数据公开日{'20211019', '20211022'}解析成功
+2021-12-16 16:19:58.899 | SUCCESS  | __main__:<module>:64 - --------END--------
+2021-12-16 16:22:54.539 | DEBUG    | FTP:find_raw_data:56 - 远程服务器的所有文件列表:['20211019', '20211022', '20211105', '20211109']
+2021-12-16 16:22:54.544 | DEBUG    | FTP:find_raw_data:57 - 本次要下载的文件列表:{'20211019', '20211022', '20211105', '20211109'}
+2021-12-16 16:22:54.649 | INFO     | FTP:download_folder:80 - 20211019的文件夹文件列表:['20211019-1-001-CRC.TXT', '20211019-1-001.ZIP', '20211019-INDEX-001.TXT', 'Legal-status-CN-20211019-S-INDEX.XML']
+2021-12-16 16:22:54.652 | INFO     | FTP:download_folder:86 - 正在下载:20211019-1-001.ZIP
+2021-12-16 16:22:54.659 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20211019\\20211019-1-001.ZIP'>
+2021-12-16 16:23:42.842 | INFO     | FTP:close:50 - ftp退出
+2021-12-16 16:23:42.853 | INFO     | Unzip:unzip_file:15 - 20211019-1-001.ZIP
+2021-12-16 16:23:42.867 | INFO     | Unzip:unzip_file:18 - C:\\Users\\ruson\\Music\20211019\20211019-1-001
+2021-12-16 16:23:42.939 | INFO     | Unzip:unzip_file:26 - 解压20211019-1-001.ZIP成功
+2021-12-16 16:23:42.942 | SUCCESS  | toast:send:70 - 数据公开日20211019解析成功
+2021-12-16 16:23:57.982 | INFO     | FTP:download_folder:80 - 20211022的文件夹文件列表:['20211022-1-001-CRC.TXT', '20211022-1-001.ZIP', '20211022-INDEX-001.TXT', 'Legal-status-CN-20211022-S-INDEX.XML']
+2021-12-16 16:23:57.984 | INFO     | FTP:download_folder:86 - 正在下载:20211022-1-001.ZIP
+2021-12-16 16:23:57.984 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20211022\\20211022-1-001.ZIP'>
+2021-12-16 16:24:28.079 | INFO     | FTP:close:50 - ftp退出
+2021-12-16 16:24:28.099 | INFO     | Unzip:unzip_file:15 - 20211022-1-001.ZIP
+2021-12-16 16:24:28.099 | INFO     | Unzip:unzip_file:18 - C:\\Users\\ruson\\Music\20211022\20211022-1-001
+2021-12-16 16:24:28.159 | INFO     | Unzip:unzip_file:26 - 解压20211022-1-001.ZIP成功
+2021-12-16 16:24:28.159 | SUCCESS  | toast:send:70 - 数据公开日20211022解析成功
+2021-12-16 16:24:41.259 | INFO     | FTP:download_folder:80 - 20211105的文件夹文件列表:['20211105-1-001-CRC.TXT', '20211105-1-001.ZIP', '20211105-INDEX-001.TXT', 'Legal-status-CN-20211105-S-INDEX.XML']
+2021-12-16 16:24:41.261 | INFO     | FTP:download_folder:86 - 正在下载:20211105-1-001.ZIP
+2021-12-16 16:24:41.263 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20211105\\20211105-1-001.ZIP'>
+2021-12-16 16:25:04.249 | ERROR    | __main__:main:37 - 下载20211105失败  
+2021-12-16 16:25:18.329 | ERROR    | __main__:main:37 - 下载20211105失败  [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2021-12-16 16:25:34.449 | ERROR    | __main__:main:37 - 下载20211105失败  [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2021-12-16 16:25:48.534 | ERROR    | __main__:main:37 - 下载20211105失败  [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2021-12-16 16:26:24.559 | SUCCESS  | __main__:<module>:65 - --------END--------
+2021-12-16 16:42:02.629 | ERROR    | toast:send_errow:76 - [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2021-12-16 16:42:23.245 | DEBUG    | FTP:find_raw_data:56 - 远程服务器的所有文件列表:['20211019', '20211022', '20211105', '20211109']
+2021-12-16 16:42:23.250 | DEBUG    | FTP:find_raw_data:57 - 本次要下载的文件列表:{'20211105', '20211109'}
+2021-12-16 16:42:23.345 | INFO     | FTP:download_folder:80 - 20211105的文件夹文件列表:['20211105-1-001-CRC.TXT', '20211105-1-001.ZIP', '20211105-INDEX-001.TXT', 'Legal-status-CN-20211105-S-INDEX.XML']
+2021-12-16 16:42:23.350 | INFO     | FTP:download_folder:86 - 正在下载:20211105-1-001.ZIP
+2021-12-16 16:42:23.353 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20211105\\20211105-1-001.ZIP'>
+2021-12-16 16:42:54.233 | INFO     | FTP:close:50 - ftp退出
+2021-12-16 16:42:54.281 | INFO     | Unzip:unzip_file:15 - 解压20211105-1-001.ZIP
+2021-12-16 16:42:54.321 | INFO     | Unzip:unzip_file:25 - 解压20211105-1-001.ZIP成功
+2021-12-16 16:42:54.324 | SUCCESS  | toast:send:70 - 数据公开日20211105解析成功
+2021-12-16 16:43:10.396 | ERROR    | __main__:main:37 - 下载20211109失败  [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2021-12-16 16:43:25.539 | ERROR    | __main__:main:37 - 下载20211109失败  [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2021-12-16 16:43:39.729 | ERROR    | __main__:main:37 - 下载20211109失败  [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2021-12-16 16:43:56.869 | ERROR    | __main__:main:37 - 下载20211109失败  [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2021-12-16 16:44:06.879 | SUCCESS  | toast:send:70 - 部分数据解析失败
+2021-12-16 16:50:33.990 | ERROR    | toast:send_errow:76 - [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2021-12-16 16:51:11.694 | ERROR    | __main__:<module>:66 - 0次登录失败  421 Too many users are connected, please try again later.
+2021-12-16 16:51:11.697 | DEBUG    | __main__:delay_time:56 - 等待15秒
+2021-12-16 16:51:26.713 | ERROR    | __main__:<module>:66 - 1次登录失败  421 Too many users are connected, please try again later.
+2021-12-16 16:51:26.720 | DEBUG    | __main__:delay_time:56 - 等待14秒
+2021-12-16 16:51:40.731 | ERROR    | __main__:<module>:66 - 2次登录失败  421 Too many users are connected, please try again later.
+2021-12-16 16:51:40.736 | DEBUG    | __main__:delay_time:56 - 等待15秒
+2021-12-16 16:51:55.738 | ERROR    | __main__:<module>:66 - 3次登录失败  421 Too many users are connected, please try again later.
+2021-12-16 16:51:55.746 | DEBUG    | __main__:delay_time:56 - 等待12秒
+2021-12-16 16:52:07.759 | SUCCESS  | toast:send:70 - 多次尝试登录但是始终登录失败
+2021-12-16 16:53:20.975 | DEBUG    | FTP:find_raw_data:56 - 远程服务器的所有文件列表:['20210910', '20210914', '20210917', '20210921', '20210924', '20210928', '20211001', '20211008', '20211012', '20211015', '20211019', '20211022', '20211026', '20211029', '20211105', '20211109', '20211112']
+2021-12-16 16:53:20.977 | DEBUG    | FTP:find_raw_data:57 - 本次要下载的文件列表:{'20210924', '20211112', '20211029', '20210917', '20211012', '20210921', '20211001', '20211008', '20211015', '20211026', '20211109', '20210928'}
+2021-12-16 16:53:21.099 | INFO     | FTP:download_folder:80 - 20210924的文件夹文件列表:['20210924-1-001-CRC.TXT', '20210924-1-001.ZIP', '20210924-INDEX-001.TXT', 'Legal-status-CN-20210924-S-INDEX.XML']
+2021-12-16 16:53:21.104 | INFO     | FTP:download_folder:86 - 正在下载:20210924-1-001.ZIP
+2021-12-16 16:53:21.106 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20210924\\20210924-1-001.ZIP'>
+2021-12-16 16:54:05.200 | INFO     | FTP:close:50 - ftp退出
+2021-12-16 16:54:05.215 | INFO     | Unzip:unzip_file:15 - 解压20210924-1-001.ZIP
+2021-12-16 16:54:05.288 | INFO     | Unzip:unzip_file:25 - 解压20210924-1-001.ZIP成功
+2021-12-16 16:54:05.291 | SUCCESS  | toast:send:70 - 数据公开日20210924解析成功
+2021-12-16 16:54:05.293 | DEBUG    | __main__:delay_time:56 - 等待12秒
+2021-12-16 16:54:17.328 | INFO     | FTP:download_folder:80 - 20211112的文件夹文件列表:['20211112-1-001-CRC.TXT', '20211112-1-001.ZIP', '20211112-INDEX-001.TXT', 'Legal-status-CN-20211112-S-INDEX.XML']
+2021-12-16 16:54:17.331 | INFO     | FTP:download_folder:86 - 正在下载:20211112-1-001.ZIP
+2021-12-16 16:54:17.333 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20211112\\20211112-1-001.ZIP'>
+2021-12-16 16:55:06.204 | INFO     | FTP:close:50 - ftp退出
+2021-12-16 16:55:06.212 | INFO     | Unzip:unzip_file:15 - 解压20211112-1-001.ZIP
+2021-12-16 16:55:06.275 | INFO     | Unzip:unzip_file:25 - 解压20211112-1-001.ZIP成功
+2021-12-16 16:55:06.279 | SUCCESS  | toast:send:70 - 数据公开日20211112解析成功
+2021-12-16 16:55:06.281 | DEBUG    | __main__:delay_time:56 - 等待15秒
+2021-12-16 16:55:21.330 | INFO     | FTP:download_folder:80 - 20211029的文件夹文件列表:['20211029-1-001-CRC.TXT', '20211029-1-001.ZIP', '20211029-INDEX-001.TXT', 'Legal-status-CN-20211029-S-INDEX.XML']
+2021-12-16 16:55:21.333 | INFO     | FTP:download_folder:86 - 正在下载:20211029-1-001.ZIP
+2021-12-16 16:55:21.334 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20211029\\20211029-1-001.ZIP'>
+2021-12-16 16:56:05.569 | INFO     | FTP:close:50 - ftp退出
+2021-12-16 16:56:05.588 | INFO     | Unzip:unzip_file:15 - 解压20211029-1-001.ZIP
+2021-12-16 16:56:05.640 | INFO     | Unzip:unzip_file:25 - 解压20211029-1-001.ZIP成功
+2021-12-16 16:56:05.642 | SUCCESS  | toast:send:70 - 数据公开日20211029解析成功
+2021-12-16 16:56:05.645 | DEBUG    | __main__:delay_time:56 - 等待10秒
+2021-12-16 16:56:15.688 | INFO     | FTP:download_folder:80 - 20210917的文件夹文件列表:['20210917-1-001-CRC.TXT', '20210917-1-001.ZIP', '20210917-INDEX-001.TXT', 'Legal-status-CN-20210917-S-INDEX.XML']
+2021-12-16 16:56:15.691 | INFO     | FTP:download_folder:86 - 正在下载:20210917-1-001.ZIP
+2021-12-16 16:56:15.694 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20210917\\20210917-1-001.ZIP'>
+2021-12-16 16:56:51.270 | INFO     | FTP:close:50 - ftp退出
+2021-12-16 16:56:51.286 | INFO     | Unzip:unzip_file:15 - 解压20210917-1-001.ZIP
+2021-12-16 16:56:51.327 | INFO     | Unzip:unzip_file:25 - 解压20210917-1-001.ZIP成功
+2021-12-16 16:56:51.330 | SUCCESS  | toast:send:70 - 数据公开日20210917解析成功
+2021-12-16 16:56:51.332 | DEBUG    | __main__:delay_time:56 - 等待15秒
+2021-12-16 16:57:06.439 | INFO     | FTP:download_folder:80 - 20211012的文件夹文件列表:['20211012-1-001-CRC.TXT', '20211012-1-001.ZIP', '20211012-INDEX-001.TXT', 'Legal-status-CN-20211012-S-INDEX.XML']
+2021-12-16 16:57:06.444 | INFO     | FTP:download_folder:86 - 正在下载:20211012-1-001.ZIP
+2021-12-16 16:57:06.455 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20211012\\20211012-1-001.ZIP'>
+2021-12-16 16:57:26.275 | INFO     | FTP:close:50 - ftp退出
+2021-12-16 16:57:26.284 | INFO     | Unzip:unzip_file:15 - 解压20211012-1-001.ZIP
+2021-12-16 16:57:26.306 | INFO     | Unzip:unzip_file:25 - 解压20211012-1-001.ZIP成功
+2021-12-16 16:57:26.310 | SUCCESS  | toast:send:70 - 数据公开日20211012解析成功
+2021-12-16 16:57:26.311 | DEBUG    | __main__:delay_time:56 - 等待12秒
+2021-12-16 16:57:38.379 | INFO     | FTP:download_folder:80 - 20210921的文件夹文件列表:['20210921-1-001-CRC.TXT', '20210921-1-001.ZIP', '20210921-INDEX-001.TXT', 'Legal-status-CN-20210921-S-INDEX.XML']
+2021-12-16 16:57:38.384 | INFO     | FTP:download_folder:86 - 正在下载:20210921-1-001.ZIP
+2021-12-16 16:57:38.386 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20210921\\20210921-1-001.ZIP'>
+2021-12-16 16:58:05.828 | INFO     | FTP:close:50 - ftp退出
+2021-12-16 16:58:05.844 | INFO     | Unzip:unzip_file:15 - 解压20210921-1-001.ZIP
+2021-12-16 16:58:05.879 | INFO     | Unzip:unzip_file:25 - 解压20210921-1-001.ZIP成功
+2021-12-16 16:58:05.882 | SUCCESS  | toast:send:70 - 数据公开日20210921解析成功
+2021-12-16 16:58:05.884 | DEBUG    | __main__:delay_time:56 - 等待15秒
+2021-12-16 16:58:20.920 | INFO     | FTP:download_folder:80 - 20211001的文件夹文件列表:['20211001-1-001-CRC.TXT', '20211001-1-001.ZIP', '20211001-INDEX-001.TXT', 'Legal-status-CN-20211001-S-INDEX.XML']
+2021-12-16 16:58:20.926 | INFO     | FTP:download_folder:86 - 正在下载:20211001-1-001.ZIP
+2021-12-16 16:58:20.930 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20211001\\20211001-1-001.ZIP'>
+2021-12-16 16:59:07.008 | INFO     | FTP:close:50 - ftp退出
+2021-12-16 16:59:07.043 | INFO     | Unzip:unzip_file:15 - 解压20211001-1-001.ZIP
+2021-12-16 16:59:07.106 | INFO     | Unzip:unzip_file:25 - 解压20211001-1-001.ZIP成功
+2021-12-16 16:59:07.109 | SUCCESS  | toast:send:70 - 数据公开日20211001解析成功
+2021-12-16 16:59:07.113 | DEBUG    | __main__:delay_time:56 - 等待11秒
+2021-12-16 16:59:18.138 | INFO     | FTP:download_folder:80 - 20211008的文件夹文件列表:['20211008-1-001-CRC.TXT', '20211008-1-001.ZIP', '20211008-INDEX-001.TXT', 'Legal-status-CN-20211008-S-INDEX.XML']
+2021-12-16 16:59:18.141 | INFO     | FTP:download_folder:86 - 正在下载:20211008-1-001.ZIP
+2021-12-16 16:59:18.143 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20211008\\20211008-1-001.ZIP'>
+2021-12-16 16:59:47.790 | INFO     | FTP:close:50 - ftp退出
+2021-12-16 16:59:47.815 | INFO     | Unzip:unzip_file:15 - 解压20211008-1-001.ZIP
+2021-12-16 16:59:47.861 | INFO     | Unzip:unzip_file:25 - 解压20211008-1-001.ZIP成功
+2021-12-16 16:59:47.864 | SUCCESS  | toast:send:70 - 数据公开日20211008解析成功
+2021-12-16 16:59:47.866 | DEBUG    | __main__:delay_time:56 - 等待15秒
+2021-12-16 17:00:02.969 | INFO     | FTP:download_folder:80 - 20211015的文件夹文件列表:['20211015-1-001-CRC.TXT', '20211015-1-001.ZIP', '20211015-INDEX-001.TXT', 'Legal-status-CN-20211015-S-INDEX.XML']
+2021-12-16 17:00:02.974 | INFO     | FTP:download_folder:86 - 正在下载:20211015-1-001.ZIP
+2021-12-16 17:00:02.980 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20211015\\20211015-1-001.ZIP'>
+2021-12-16 17:00:26.558 | INFO     | FTP:close:50 - ftp退出
+2021-12-16 17:00:26.581 | INFO     | Unzip:unzip_file:15 - 解压20211015-1-001.ZIP
+2021-12-16 17:00:26.612 | INFO     | Unzip:unzip_file:25 - 解压20211015-1-001.ZIP成功
+2021-12-16 17:00:26.616 | SUCCESS  | toast:send:70 - 数据公开日20211015解析成功
+2021-12-16 17:00:26.621 | DEBUG    | __main__:delay_time:56 - 等待15秒
+2021-12-16 17:00:41.739 | INFO     | FTP:download_folder:80 - 20211026的文件夹文件列表:['20211026-1-001-CRC.TXT', '20211026-1-001.ZIP', '20211026-INDEX-001.TXT', 'Legal-status-CN-20211026-S-INDEX.XML']
+2021-12-16 17:00:41.744 | INFO     | FTP:download_folder:86 - 正在下载:20211026-1-001.ZIP
+2021-12-16 17:00:41.750 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20211026\\20211026-1-001.ZIP'>
+2021-12-16 17:01:37.068 | INFO     | FTP:close:50 - ftp退出
+2021-12-16 17:01:37.093 | INFO     | Unzip:unzip_file:15 - 解压20211026-1-001.ZIP
+2021-12-16 17:01:37.164 | INFO     | Unzip:unzip_file:25 - 解压20211026-1-001.ZIP成功
+2021-12-16 17:01:37.167 | SUCCESS  | toast:send:70 - 数据公开日20211026解析成功
+2021-12-16 17:01:37.170 | DEBUG    | __main__:delay_time:56 - 等待11秒
+2021-12-16 17:01:48.228 | INFO     | FTP:download_folder:80 - 20211109的文件夹文件列表:['20211109-1-001-CRC.TXT', '20211109-1-001.ZIP', '20211109-INDEX-001.TXT', 'Legal-status-CN-20211109-S-INDEX.XML']
+2021-12-16 17:01:48.231 | INFO     | FTP:download_folder:86 - 正在下载:20211109-1-001.ZIP
+2021-12-16 17:01:48.234 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20211109\\20211109-1-001.ZIP'>
+2021-12-16 17:02:21.438 | INFO     | FTP:close:50 - ftp退出
+2021-12-16 17:02:21.468 | INFO     | Unzip:unzip_file:15 - 解压20211109-1-001.ZIP
+2021-12-16 17:02:21.519 | INFO     | Unzip:unzip_file:25 - 解压20211109-1-001.ZIP成功
+2021-12-16 17:02:21.523 | SUCCESS  | toast:send:70 - 数据公开日20211109解析成功
+2021-12-16 17:02:21.527 | DEBUG    | __main__:delay_time:56 - 等待11秒
+2021-12-16 17:02:32.639 | INFO     | FTP:download_folder:80 - 20210928的文件夹文件列表:['20210928-1-001-CRC.TXT', '20210928-1-001.ZIP', '20210928-INDEX-001.TXT', 'Legal-status-CN-20210928-S-INDEX.XML']
+2021-12-16 17:02:32.645 | INFO     | FTP:download_folder:86 - 正在下载:20210928-1-001.ZIP
+2021-12-16 17:02:32.650 | INFO     | FTP:DownLoadFile:68 - <_io.BufferedWriter name='C:\\\\Users\\\\ruson\\\\Music\\20210928\\20210928-1-001.ZIP'>
+2021-12-16 17:03:00.941 | INFO     | FTP:close:50 - ftp退出
+2021-12-16 17:03:00.967 | INFO     | Unzip:unzip_file:15 - 解压20210928-1-001.ZIP
+2021-12-16 17:03:01.017 | INFO     | Unzip:unzip_file:25 - 解压20210928-1-001.ZIP成功
+2021-12-16 17:03:01.019 | SUCCESS  | toast:send:70 - 数据公开日20210928解析成功
+2021-12-16 17:03:01.021 | DEBUG    | __main__:delay_time:56 - 等待11秒
+2021-12-16 17:03:12.028 | SUCCESS  | __main__:<module>:70 - --------END--------

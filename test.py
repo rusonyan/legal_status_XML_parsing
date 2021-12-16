@@ -1,7 +1,5 @@
 import time
 from loguru import logger
-from Unzip import unzip_file
-from xml_to_node import locate_XML_file
 
 import pickle
 # locate_XML_file(r'C:/Users/ruson/Desktop/法律状态/XML数据/')
@@ -40,8 +38,8 @@ a=list(get())
 a.sort()
 print(a)
 
-# a=a[:-2]
-# print(a)
-# b=set(a)
-# print(b)
-# put(b)
+a=a[0:2]
+print(a)
+b=set(a)
+print(b)
+put(b)

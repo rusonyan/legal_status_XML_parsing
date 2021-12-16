@@ -1,4 +1,6 @@
 import ftplib
+from logging import log
+from re import S
 import time
 import pickle
 from loguru import logger
@@ -6,6 +8,11 @@ import os
 '''
 FTP更新
 '''
+def history_add(str):
+    history=get()
+    history.add(str)
+    with open('.history', 'wb') as f:
+        pickle.dump(history, f)
 
 
 def put(tuple):
@@ -21,60 +28,57 @@ def get():
 class Ftp:
     ftp = ftplib.FTP()
 
-    def __init__(self):
+    def __init__(self,Local,Remote):
+        self.Local=Local
+        self.Remote=Remote   
         self.ftp.connect('patdata2.cnipa.gov.cn', 21)
         self.ftp.login('xxzx_yingmaiqi', 'yingmaiqi1.')
+    
+    def login(self):
+        self.ftp.connect('patdata2.cnipa.gov.cn', 21)
+        self.ftp.login('xxzx_yingmaiqi', 'yingmaiqi1.')
+ 
+    def close(self):
+        self.ftp.quit()
+        logger.info("ftp退出")
 
+    def find_raw_data(self):
+        self.ftp.cwd(self.Remote)
+        RemoteNames = self.ftp.nlst()
+        newSet = set(RemoteNames) - get()
+        logger.debug("远程服务器的所有文件列表:"+str(RemoteNames))
+        logger.debug("本次要下载的文件列表:"+str(newSet))
+        # put(set(RemoteNames))
+        # newSet=set(RemoteNames)-set(RemoteNames)
+        if len(newSet) is 0:
+            return None       
+        else:
+            return newSet
+    
 
-    def DownLoadFile(self, LocalFile, RemoteFile):
-        time.sleep(10)
+    def download_file(self, LocalFile, RemoteFile):
         file_handler = open(LocalFile, 'wb')
         logger.info(file_handler)
         self.ftp.retrbinary('RETR ' + RemoteFile, file_handler.write)
         file_handler.close()
         return True
+    
 
-    def DownLoadFileTrees(self, LocalDir, RemoteDir):
+    def download_folder(self, LocalDir, folder):
+        RemoteDir=os.path.join(self.Remote, folder)
         if not os.path.exists(LocalDir):
             os.makedirs(LocalDir)
         self.ftp.cwd(RemoteDir)
         RemoteNames = self.ftp.nlst()
+        logger.info(folder+"的文件夹文件列表:"+str(RemoteNames))
         for file in RemoteNames:
             Local = os.path.join(LocalDir, file)
             if file.find(".") == -1:
-                if not os.path.exists(Local):
-                    os.makedirs(Local)
-                self.DownLoadFileTrees(Local, file)
+                logger.error(RemoteDir)
+            elif file.endswith('.ZIP'):
+                logger.info("正在下载:"+file)
+                if self.download_file(Local, file):
+                    history_add(folder)
             else:
-                self.DownLoadFile(Local, file)
-        self.ftp.cwd("..")
-        return RemoteNames
+                pass
 
-    def DownLoadFileTree(self, LocalDir, RemoteDir):
-        if not os.path.exists(LocalDir):
-            os.makedirs(LocalDir)
-        self.ftp.cwd(RemoteDir)
-        RemoteNames = self.ftp.nlst()
-        newSet = set(RemoteNames) - get()
-        logger.debug("远程服务器的所有文件列表:"+str(RemoteNames))
-        
-        # put(set(RemoteNames))
-        # newSet=set(RemoteNames)-set(RemoteNames)
-        if len(newSet) is 0:
-            return None
-        else:
-            for file in newSet:
-                Local = os.path.join(LocalDir, file)
-                logger.info(self.ftp.nlst(file))
-                if file.find(".") == -1:
-                    if not os.path.exists(Local):
-                        os.makedirs(Local)
-                    self.DownLoadFileTrees(Local, file)
-                else:
-                    self.DownLoadFile(Local, file)
-            self.ftp.cwd("..")
-            put(set(RemoteNames))
-            return newSet
-
-    def close(self):
-        self.ftp.quit()
