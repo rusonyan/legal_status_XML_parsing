@@ -12,9 +12,9 @@ from Unzip import unzip_file
 """
 
 MAX_RETRY = 4
-MINI_CONNECT_TIME = 10
-MAX_CONNECT_TIME = 15
-LOCAL_FOLDER = r"C:\\Users\\ruson\\Music"
+MINI_CONNECT_TIME = 1000
+MAX_CONNECT_TIME = 3000
+LOCAL_FOLDER = r'/home/yrs/history/'
 REMOTE_FOLDER = r"SIPO/CN-PA-PRSS-30 中国外观设计专利法律状态标准化数据/".encode("utf-8").decode(
     "latin1"
 )
@@ -25,13 +25,13 @@ def main(state):
     ftp = Ftp(LOCAL_FOLDER, REMOTE_FOLDER)
     RemoteNames = ftp.find_raw_data()
     if RemoteNames is None:
-        toast.send("今天无XML更新鸭!", "今天无XML更新鸭!")
+        toast.send("今天无XML更新鸭!🙌", "今天无XML更新鸭!🙌")
     else:
         for folder in RemoteNames:
             while state < MAX_RETRY:
                 try:
                     single_floder(ftp, folder)
-                    toast.send("数据公开日" + str(folder), "解析成功")
+                    toast.send("😽😽 数据公开日" + str(folder), "解析成功")
                     break
                 except ftplib.all_errors as e:
                     logger.error("下载" + folder + "失败  " + str(e))
@@ -66,7 +66,7 @@ try:
             logger.error(str(state) + "次登录失败  " + str(e))
             delay_time()
             state += 1
-    toast.send("多次尝试登录但是始终", "登录失败") if state == MAX_RETRY else logger.success(
+    toast.send("😿😿  多次尝试登录但是始终", "登录失败") if state == MAX_RETRY else logger.success(
         "--------END--------"
     )
 except Exception as e:

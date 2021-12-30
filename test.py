@@ -38,8 +38,8 @@ a=list(get())
 a.sort()
 print(a)
 
-a=a[0:2]
-print(a)
-b=set(a)
-print(b)
-put(b)
+# a=a[0:-2]
+# print(a)
+# b=set(a)
+# print(b)
+# put(b)

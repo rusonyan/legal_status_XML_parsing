@@ -39,7 +39,7 @@ def ding_errow(text):
             "isAtAll": False
         },
         "text": {
-            "content": text + '--XML解析器'
+            "content": text + '\n🛸解析酱🛸'
         },
         "msgtype": "text"
     }
@@ -58,7 +58,7 @@ def ding_send(text):
             "isAtAll": False
         },
         "text": {
-            "content": text + '--XML解析器'
+            "content": text + '\n🛸解析酱🛸'
         },
         "msgtype": "text"
     }
@@ -68,10 +68,10 @@ def ding_send(text):
 
 def send(title, msg):
     logger.success(title+msg)
-    #ding_send(title+msg)
+    ding_send(title+msg)
 
 
 def send_errow(title, msg):
     #send_mail(title, msg)
     logger.error(msg)
-    #ding_errow(title+msg)
+    ding_errow(title+msg)

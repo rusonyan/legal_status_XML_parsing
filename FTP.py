@@ -29,9 +29,10 @@ class Ftp:
     ftp = ftplib.FTP()
 
     def __init__(self,Local,Remote):
+        self.ftp.set_debuglevel(2)
         self.Local=Local
         self.Remote=Remote   
-        self.ftp.connect('patdata2.cnipa.gov.cn', 21)
+        self.ftp.connect(host='patdata2.cnipa.gov.cn', port=21,timeout=1200)
         self.ftp.login('xxzx_yingmaiqi', 'yingmaiqi1.')
     
     def login(self):
@@ -50,10 +51,12 @@ class Ftp:
         logger.debug("本次要下载的文件列表:"+str(newSet))
         # put(set(RemoteNames))
         # newSet=set(RemoteNames)-set(RemoteNames)
-        if len(newSet) is 0:
+        new_list=list(newSet)
+        new_list.sort()
+        if len(new_list) is 0:
             return None       
         else:
-            return newSet
+            return new_list
     
 
     def download_file(self, LocalFile, RemoteFile):
@@ -61,6 +64,7 @@ class Ftp:
         logger.info(file_handler)
         self.ftp.retrbinary('RETR ' + RemoteFile, file_handler.write)
         file_handler.close()
+        logger.info("下载完成")
         return True
     
 
