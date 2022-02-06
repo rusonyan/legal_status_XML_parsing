@@ -1,12 +1,14 @@
 # conding=utf8
 import os
 
-from loguru import logger
-import toast
 import xmltodict
+from loguru import logger
+
+import toast
 from node import node_parse
+
 '''
-XML节点分拆
+XML节点组分拆
 '''
 
 
@@ -29,5 +31,3 @@ def locate_XML_file(path):
                 if "business:PRS" in doc.keys():
                     doc_data = doc["business:PRS"]["business:PRSRecord"]
                     node_parse(doc_data)
-                else:
-                    pass

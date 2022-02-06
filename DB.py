@@ -1,17 +1,30 @@
+
+import re
+from datetime import datetime
+
 import cpca
-from loguru import logger
 import mysql.connector
+from loguru import logger
+
 '''
 数据库连接
 '''
 
 
+def split_patent(str):
+    result = re.findall(r'ZL ([0-9a-zA-Z.\d]{10,14})', str)[0]
+    if result is None:
+        raise Exception('专利号错误')
+    else:
+        return result
+
+
 class DB:
     def __init__(self, publishTime):
         self.cn = mysql.connector.connect(
-            host='localhost', port=3306, db='legalState', user='ruson', password='yanruisong',charset='utf8'
+            host='localhost', port=3306, db='test', user='root', password='123456', charset='utf8'
         )
-        logger.info("此次操作数据库为: legalState")
+        logger.debug("此次操作数据库为：测试库")
         self.cursor = self.cn.cursor()
         self.publishTime = publishTime
 
@@ -19,13 +32,10 @@ class DB:
         self.cursor.execute('select @@identity')
         return self.cursor.fetchone()
 
+    def end(self):
+        self.cursor.execute('INSERT INTO  change_db_log VALUES (%s,%s,%s,%s)',
+                          (0, datetime.now(), self.publishTime, None))
 
-def spilt_address(location, state=True):
-    result = cpca.transform([location], pos_sensitive=True).values[0]
-    for r in result:
-        if r is None:
-            state = False
-    if state and result[5] != -1:
-        return result
-    else:
-        return list(map(lambda x: None, result))
+
+def spilt_address(location):
+    return cpca.transform([location], ).values[0]

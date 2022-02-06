@@ -1,10 +1,9 @@
 import json
-from logging import log
 import smtplib
 from email.mime.text import MIMEText
-from loguru import logger
 
 import requests
+from loguru import logger
 
 host = 'smtp.email.cn'
 user = 'yanruisong@email.cn'
@@ -67,11 +66,11 @@ def ding_send(text):
 
 
 def send(title, msg):
-    logger.success(title+msg)
-    ding_send(title+msg)
+    logger.success(title + msg)
+    # ding_send(title+msg)
 
 
 def send_errow(title, msg):
-    #send_mail(title, msg)
+    # send_mail(title, msg)
     logger.error(msg)
-    ding_errow(title+msg)
+    # ding_errow(title+msg)

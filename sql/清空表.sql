@@ -1,0 +1,12 @@
+truncate table change_db_log;
+truncate table cp;
+truncate table dd;
+truncate table ec;
+truncate table ee;
+truncate table ip;
+truncate table patent_change_log;
+truncate table pc;
+truncate table pe;
+truncate table pm;
+truncate table rr;
+truncate table tr;
