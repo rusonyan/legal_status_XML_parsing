@@ -21,7 +21,6 @@ def locate_XML_file(path):
 
     for file in all_file_list:
         if file.endswith('.XML'):
-            logger.info(file)
             with open(file, 'r', encoding='UTF-8') as f:
                 xml = f.read()
                 try:
@@ -29,5 +28,6 @@ def locate_XML_file(path):
                 except Exception as e:
                     toast.send_errow('XML文件出错,文件打开失败！', str(e))
                 if "business:PRS" in doc.keys():
+                    logger.info(file)
                     doc_data = doc["business:PRS"]["business:PRSRecord"]
                     node_parse(doc_data)

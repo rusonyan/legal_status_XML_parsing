@@ -11,6 +11,7 @@ import toast
 from FTP import Ftp
 from Unzip import unzip_file
 from config import LOCAL_FOLDER, REMOTE_FOLDER, MAX_RETRY, MINI_CONNECT_TIME, MAX_CONNECT_TIME
+from xml_to_node import locate_XML_file
 
 """
 FTP请求控制
@@ -50,6 +51,7 @@ def single_flooder_handle(ftp, folder):
     ftp.download_folder(LocalDir, folder)
     ftp.close()
     unzip_file(LocalDir)
+    locate_XML_file(LocalDir)
 
 
 def delay_time():
