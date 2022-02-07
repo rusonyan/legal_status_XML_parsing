@@ -22,7 +22,7 @@ def split_patent(str):
 class DB:
     def __init__(self, publishTime):
         self.cn = mysql.connector.connect(
-            host='localhost', port=3306, db='test', user='root', password='123456', charset='utf8'
+            host='localhost', port=3306, db='test', user='ruson', password='yanruisong', charset='utf8'
         )
         logger.debug("此次操作数据库为：测试库")
         self.cursor = self.cn.cursor()

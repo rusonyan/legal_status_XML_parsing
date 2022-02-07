@@ -8,7 +8,7 @@ from xml_to_node import locate_XML_file
 批量处理XML
 '''
 
-Local = r'C:\Users\ruson\Desktop\XML数据'
+Local = r'/root/文档/xml/'
 
 if __name__ == '__main__':
     files = os.listdir(Local)

@@ -1,4 +1,4 @@
 #! /bin/bash
 
-cd /home/yrs/legal_status_XML_parsing
+cd /root/视频/legal_status_XML_parsing
 python3 App.py
