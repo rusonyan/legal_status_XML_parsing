@@ -81,7 +81,8 @@ class Ftp:
                 if self.download_file(Local, file):
                     history_add(folder)
 
-if __name__=='__main__':
-    already_list=list(get())
+
+if __name__ == "__main__":
+    already_list = list(get())
     already_list.sort()
     print(already_list)

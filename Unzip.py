@@ -3,14 +3,14 @@ import zipfile
 
 from loguru import logger
 
-'''
+"""
 批量文件夹解压
-'''
+"""
 
 
 def unzip_file(path):
     for filename in os.listdir(path):
-        if filename.endswith('.ZIP'):
+        if filename.endswith(".ZIP"):
             filepath = os.path.join(path, filename)
             zip_file = zipfile.ZipFile(filepath)
             logger.info("解压" + filename)

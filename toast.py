@@ -50,10 +50,10 @@ def ding_send(text):
 
 def send(title, msg):
     logger.success(title + msg)
-    ding_send(title+msg)
+    ding_send(title + msg)
 
 
 def send_errow(title, msg):
     # send_mail(title, msg)
     logger.error(msg)
-    ding_errow(title+msg)
+    ding_errow(title + msg)

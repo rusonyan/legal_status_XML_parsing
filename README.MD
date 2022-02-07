@@ -2,11 +2,18 @@
 
 ## 如何使用
 
-1. 在MySQL(Community 8.0.27)建立一个新数据库,字符集为"utf8mb4",排序规则为"utf8mb4_general_ci".
+1. 在MySQL(Community 8.0.27)创建新数据库,字符集为"utf8mb4",排序规则为"utf8mb4_general_ci".
 2. 执行"/sql"文件夹下的"建表.sql"文件
 3. 在DB.py 配置数据库信息
 4. App.py文件为程序主文件，在程序内填写目标目录，运行App.py即可
 5. Bulk_operations.py为批量处理工具
+6. 定时任务使用Linux的crontab工具,使用crontab -e进入定时任务编辑模式,添加以下字符,然后保存即可
+ ```sh
+37 2  * * * bash /root/视频/legal_status_XML_parsing/start.sh
+ ```
+  
+
+
 
 ## 解析种类
 

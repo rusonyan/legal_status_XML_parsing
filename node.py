@@ -7,9 +7,9 @@ import toast
 from DB import DB
 from config import UNRESOLVED_STATUS_CODE
 
-''' 
+""" 
 模板解析器
-'''
+"""
 
 
 def checks(num):
@@ -17,8 +17,9 @@ def checks(num):
     check_code = 0
     for x, y in zip(value, num):
         check_code = check_code + x * int(y)
-    return 'ZL ' + num + '.' + str(
-        (check_code % 11)) if (check_code % 11) != 10 else 'X'
+    return (
+        "ZL " + num + "." + str((check_code % 11)) if (check_code % 11) != 10 else "X"
+    )
 
 
 def match(line, rule):
@@ -40,33 +41,42 @@ def handle(lines, rules, result, i=0, j=0):
 
 def temp(db, code, p_num, text):
     try:
-        config.MODEL[code]['fun'](db, code, p_num, text,
-                                  handle(text.splitlines(),
-                                         config.MODEL[code]['re'], []))
+        config.MODEL[code]["fun"](
+            db,
+            code,
+            p_num,
+            text,
+            handle(text.splitlines(), config.MODEL[code]["re"], []),
+        )
     except ValueError as e:
         logger.error(e)
 
 
-def node_parse(node):
-    s = ''
-    db = DB(node[0]['business:PRSPublicationDate']['base:Date'])
+def node_parse(node, count=0):
+    s = ""
+    db = DB(node[0]["business:PRSPublicationDate"]["base:Date"])
     try:
         for d in node:
-            if d['business:PRSCode'] in config.MODEL:
+            if d["business:PRSCode"] in config.MODEL:
                 temp(
-                    db, d['business:PRSCode'],
-                    d['business:ApplicationReference'][0]['base:DocumentID']
-                    ['base:DocNumber'], d['business:PRSInformation'])
-            elif d['business:PRSCode'][:2] in UNRESOLVED_STATUS_CODE:
+                    db,
+                    d["business:PRSCode"],
+                    d["business:ApplicationReference"][0]["base:DocumentID"][
+                        "base:DocNumber"
+                    ],
+                    d["business:PRSInformation"],
+                )
+                count += 1
+            elif d["business:PRSCode"][:2] in UNRESOLVED_STATUS_CODE:
                 pass
             else:
-                s = s + d['business:PRSCode'] + '\n' + d[
-                    'business:PRSInformation']
+                s = s + d["business:PRSCode"] + "\n" + d["business:PRSInformation"]
         db.end()
     except IOError as e:
         db.cn.rollback()
-        toast.send_errow('数据库插入发生错误', str(e))
+        toast.send_errow("数据库插入发生错误", str(e))
     else:
         db.cn.commit()
     if len(s) > 0:
         toast.send("发现一个新表头", s)
+    return count

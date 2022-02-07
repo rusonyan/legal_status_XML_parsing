@@ -10,7 +10,13 @@ from loguru import logger
 import toast
 from FTP import Ftp
 from Unzip import unzip_file
-from config import LOCAL_FOLDER, REMOTE_FOLDER, MAX_RETRY, MINI_CONNECT_TIME, MAX_CONNECT_TIME
+from config import (
+    LOCAL_FOLDER,
+    REMOTE_FOLDER,
+    MAX_RETRY,
+    MINI_CONNECT_TIME,
+    MAX_CONNECT_TIME,
+)
 from xml_to_node import locate_XML_file
 
 """
@@ -32,7 +38,6 @@ def polling_control(RemoteNames, ftp, state):
         while state < MAX_RETRY:
             try:
                 single_flooder_handle(ftp, folder)
-                toast.send("😽😽 数据公开日" + str(folder), "解析成功!")
                 break
             except ftplib.all_errors as e:
                 logger.error("下载" + folder + "失败  " + str(e))
@@ -51,7 +56,8 @@ def single_flooder_handle(ftp, folder):
     ftp.download_folder(LocalDir, folder)
     ftp.close()
     unzip_file(LocalDir)
-    locate_XML_file(LocalDir)
+    count = locate_XML_file(LocalDir)
+    toast.send("😽😽 数据公开日" + str(folder) + "解析成功!", "共入库" + str(count) + "条数据")
 
 
 def delay_time():
