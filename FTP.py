@@ -4,6 +4,8 @@ import pickle
 
 from loguru import logger
 
+from config import FTP_CONFIG
+
 """
 FTP类
 """
@@ -33,12 +35,13 @@ class Ftp:
         self.ftp.set_debuglevel(2)
         self.Local = Local
         self.Remote = Remote
-        self.ftp.connect(host="patdata2.cnipa.gov.cn", port=21, timeout=1200)
-        self.ftp.login("xxzx_yingmaiqi", "yingmaiqi1.")
+        self.ftp.encoding="utf-8"
+        self.ftp.connect(host=FTP_CONFIG[0]["host"], port=21,timeout=1200)
+        self.ftp.login(FTP_CONFIG[0]["username"], FTP_CONFIG[0]["password"])
 
     def login(self):
-        self.ftp.connect("patdata2.cnipa.gov.cn", 21)
-        self.ftp.login("xxzx_yingmaiqi", "yingmaiqi1.")
+        self.ftp.connect(FTP_CONFIG[0]["host"], 21,timeout=1200)
+        self.ftp.login(FTP_CONFIG[0]["username"], FTP_CONFIG[0]["password"])
 
     def close(self):
         self.ftp.quit()

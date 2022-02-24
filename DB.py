@@ -23,7 +23,7 @@ class DB:
         self.cn = mysql.connector.connect(
             host="localhost",
             port=3306,
-            db="test",
+            db="legalState",
             user="ruson",
             password="yanruisong",
             charset="utf8",

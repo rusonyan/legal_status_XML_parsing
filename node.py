@@ -74,7 +74,7 @@ def node_parse(node, count=0):
         db.end()
     except IOError as e:
         db.cn.rollback()
-        toast.send_errow("数据库插入发生错误", str(e))
+        toast.send_errow("数据库插入错误", str(e))
     else:
         db.cn.commit()
     if len(s) > 0:

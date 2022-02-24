@@ -28,7 +28,7 @@ def request_controller(state):
     ftp = Ftp(LOCAL_FOLDER, REMOTE_FOLDER)
     RemoteNames = ftp.find_raw_data()
     if RemoteNames is None:
-        toast.send("未发现XML更新!🙌 --", str(datetime.date.today()))
+        toast.send("无更新 --", str(datetime.date.today()))
     else:
         polling_control(RemoteNames, ftp, state)
 
@@ -57,7 +57,7 @@ def single_flooder_handle(ftp, folder):
     ftp.close()
     unzip_file(LocalDir)
     count = locate_XML_file(LocalDir)
-    toast.send("😽😽 数据公开日" + str(folder) + "解析成功!", "共入库" + str(count) + "条数据")
+    toast.send("外观设计事务(" + str(datetime.datetime.strptime(str(folder), '%Y%m%d').date()) + ")公报处理完毕,", "共处理" + str(count) + "条数据.")
 
 
 def delay_time():

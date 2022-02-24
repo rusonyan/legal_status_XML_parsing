@@ -9,7 +9,7 @@
 5. Bulk_operations.py为批量处理工具
 6. 定时任务使用Linux的crontab工具,使用crontab -e进入定时任务编辑模式,添加以下字符,然后保存即可
  ```sh
-37 2  * * * bash /root/视频/legal_status_XML_parsing/start.sh
+37 1  * * * bash /root/视频/legal_status_XML_parsing/start.sh
  ```
   
 

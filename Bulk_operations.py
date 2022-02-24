@@ -1,6 +1,7 @@
 import os
 
 from loguru import logger
+from Unzip import unzip_file
 
 from xml_to_node import locate_XML_file
 
@@ -16,5 +17,5 @@ if __name__ == "__main__":
     for file in files:
         path = os.path.join(Local, file)
         logger.debug(path)
-        # unzip_file(path)
+        unzip_file(path)
         locate_XML_file(path)

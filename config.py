@@ -5,13 +5,19 @@ from core_datebase import *
 """
 
 MAX_RETRY = 4  # 每日最大重连次数
-MINI_CONNECT_TIME = 2000  # 每次重新请求间隔的最短时间(单位:秒)
-MAX_CONNECT_TIME = 4000  # 每次重新请求间隔的最长时间(单位:秒)
+MINI_CONNECT_TIME = 3000  # 每次重新请求间隔的最短时间(单位:秒)
+MAX_CONNECT_TIME = 5000  # 每次重新请求间隔的最长时间(单位:秒)
 UNRESOLVED_STATUS_CODE = ("CB", "GR", "CD")  # 不予处理的法律状态类型
 LOCAL_FOLDER = r"/root/文档/"  # 存放本地XML的文件夹
-REMOTE_FOLDER = r"SIPO/CN-PA-PRSS-30 中国外观设计专利法律状态标准化数据/".encode("utf-8").decode(
-    "latin1"
-)  # FTP服务端远程文件夹
+REMOTE_FOLDER = r"CN-PRSS-30_中国外观设计专利法律状态标准化数据/"  # FTP服务端远程文件夹
+FTP_CONFIG=[{
+    "host": "patdata1ftp.cnipa.gov.cn",
+    "username":"cbs_yrusonyan123",
+    "password":"SX8l99rK"
+}]
+
+
+
 
 """
 解析模板配置
