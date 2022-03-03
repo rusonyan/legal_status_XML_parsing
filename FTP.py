@@ -35,7 +35,7 @@ class Ftp:
         self.ftp.set_debuglevel(2)
         self.Local = Local
         self.Remote = Remote
-        self.ftp.encoding="utf-8"
+        self.ftp.encoding="gbk"
         self.ftp.connect(host=FTP_CONFIG[0]["host"], port=21,timeout=1200)
         self.ftp.login(FTP_CONFIG[0]["username"], FTP_CONFIG[0]["password"])
 
@@ -47,9 +47,11 @@ class Ftp:
         self.ftp.quit()
         logger.info("ftp退出")
 
-    def find_raw_data(self):
+    def find_raw_data(self,RemoteNames=[]):
         self.ftp.cwd(self.Remote)
-        RemoteNames = self.ftp.nlst()
+        mlsd = self.ftp.mlsd()
+        for m in mlsd:
+            RemoteNames.append(m[0])
         newSet = set(RemoteNames) - get()
         logger.debug("远程服务器的所有文件列表:" + str(RemoteNames))
         logger.debug("本次要下载的文件列表:" + str(newSet))
@@ -86,6 +88,7 @@ class Ftp:
 
 
 if __name__ == "__main__":
+    history_add(".")
     already_list = list(get())
     already_list.sort()
     print(already_list)

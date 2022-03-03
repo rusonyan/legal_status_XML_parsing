@@ -4,7 +4,7 @@ from core_datebase import *
 程序配置
 """
 
-MAX_RETRY = 4  # 每日最大重连次数
+MAX_RETRY = 2  # 每日最大重连次数
 MINI_CONNECT_TIME = 3000  # 每次重新请求间隔的最短时间(单位:秒)
 MAX_CONNECT_TIME = 5000  # 每次重新请求间隔的最长时间(单位:秒)
 UNRESOLVED_STATUS_CODE = ("CB", "GR", "CD")  # 不予处理的法律状态类型

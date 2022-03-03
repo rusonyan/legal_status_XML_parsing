@@ -27,12 +27,12 @@ def ding_post(text, isError=0):
 
 def send(title, msg=""):
     logger.success(title + msg)
-    #ding_post(title + msg)
+    ding_post(title + msg)
 
 
 def send_errow(title, msg=""):
     logger.error(title + msg)
-    #ding_post(title + msg, 1)
+    ding_post(title + msg, 1)
 
 
 if __name__ == "__main__":
