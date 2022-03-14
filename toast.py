@@ -1,8 +1,8 @@
 import json
-import smtplib
+import locale
 from email.mime.text import MIMEText
-import datetime
 
+import time
 import requests
 from loguru import logger
 
@@ -13,7 +13,7 @@ ATGROUP = [{"isAtAll": False}, {"atMobiles": ["15531344258"], "isAtAll": False}]
 def ding_post(text, isError=0):
     message = {
         "text": {
-            "content": text + "\n\nparsing robot   --" + str(datetime.date.today())
+            "content": text + "\n\nparsing robot   --" + str(time.strftime('%m月%d日'))
         },
         "msgtype": "text",
     }

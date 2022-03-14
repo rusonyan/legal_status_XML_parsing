@@ -4,7 +4,6 @@ import os
 import random
 import sys
 import time
-
 from loguru import logger
 
 import toast
@@ -28,7 +27,7 @@ def request_controller(state):
     ftp = Ftp(LOCAL_FOLDER, REMOTE_FOLDER)
     RemoteNames = ftp.find_raw_data()
     if RemoteNames is None:
-        toast.send("无更新 --", str(datetime.date.today()))
+        toast.send("CNIPA暂无数据更新 ")
     else:
         polling_control(RemoteNames, ftp, state)
 
@@ -46,7 +45,7 @@ def polling_control(RemoteNames, ftp, state):
         if state < MAX_RETRY:
             delay_time()
         else:
-            toast.send("部分数据", "请求失败")
+            toast.send("部分更新数据", "请求失败")
             sys.exit(0)
 
 
@@ -57,7 +56,12 @@ def single_flooder_handle(ftp, folder):
     ftp.close()
     unzip_file(LocalDir)
     count = locate_XML_file(LocalDir)
-    toast.send("外观设计事务(" + str(datetime.datetime.strptime(str(folder), '%Y%m%d').date()) + ")公报处理完毕,", "共处理" + str(count) + "条数据.")
+    toast.send(
+        "外观设计事务("
+        + str(datetime.datetime.strptime(str(folder), "%Y%m%d").date())
+        + ")公报处理完毕,",
+        "共处理" + str(count) + "条数据.",
+    )
 
 
 def delay_time():
